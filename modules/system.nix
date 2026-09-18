@@ -28,6 +28,9 @@
     pulseaudio
     peaclock
 
+    woeusb-ng
+    ntfs3g
+
     # Wayland Screen & Clipboard Tools
     wl-clipboard
     cliphist

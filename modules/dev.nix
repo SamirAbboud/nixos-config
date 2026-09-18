@@ -21,9 +21,10 @@
 
     # C / C++
     clang-tools
-    clang
+    gcc
     gnumake
     cmake
+    perl
 
     # Rust & Go & Zig
     rustup
