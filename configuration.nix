@@ -55,6 +55,27 @@
     networkmanager.enable = true;
   };
 
+  # Route ONLY .test domain traffic to local dnsmasq
+  services.resolved = {
+    enable = true;
+    domains = [ "~test" ];
+    settings = {
+      Resolve = {
+        DNS = [ "127.0.0.1:5353" ];
+      };
+    };
+  };
+
+  # Local DNS listener running on port 5353 (prevents port 53 conflicts)
+  services.dnsmasq = {
+    enable = true;
+    settings = {
+      port = 5353;
+      listen-address = "127.0.0.1";
+      address = [ "/.test/127.0.0.1" ];
+    };
+  };
+
   time.timeZone = "Africa/Algiers";
   i18n.defaultLocale = "en_US.UTF-8";
   console.keyMap = "us";
