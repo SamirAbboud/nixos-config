@@ -58,10 +58,10 @@
   # Route ONLY .test domain traffic to local dnsmasq
   services.resolved = {
     enable = true;
-    domains = [ "~test" ];
     settings = {
       Resolve = {
         DNS = [ "127.0.0.1:5353" ];
+        Domains = [ "~test" ];
       };
     };
   };
@@ -95,6 +95,16 @@
   };
 
   security.sudo.wheelNeedsPassword = true;
+
+  # ===========================================================================
+  # SECURITY & PKI (LOCAL CA TRUST)
+  # ===========================================================================
+  security.pki.certificateFiles = [
+    (builtins.path {
+      path = "/home/samir/.local/share/mkcert/rootCA.pem";
+      name = "mkcert-rootCA.pem";
+    })
+  ];
 
   # ===========================================================================
   # DESKTOP ENVIRONMENT, DISPLAY & SERVICES
