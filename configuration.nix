@@ -36,6 +36,8 @@
 
   services.power-profiles-daemon.enable = true;
 
+  virtualisation.docker.enable = true;
+
   # Custom Lenovo Conservation Mode Service
   systemd.services.lenovo-conservation-mode = {
     description = "Enable Lenovo battery conservation mode";
@@ -91,6 +93,7 @@
     extraGroups = [
       "wheel"
       "networkmanager"
+      "docker"
     ];
   };
 
