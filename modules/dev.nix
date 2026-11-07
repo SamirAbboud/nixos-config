@@ -65,5 +65,9 @@
     # YAML & Markdown Language Servers
     yaml-language-server
     marksman
+
+    # API
+    httpie
+    httpie-desktop
   ];
 }
