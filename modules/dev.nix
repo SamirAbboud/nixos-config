@@ -26,8 +26,14 @@
     cmake
     perl
 
-    # Rust & Go & Zig
-    rustup
+    # Rust
+    cargo
+    rustc
+    rust-analyzer
+    clippy
+    rustfmt
+
+    # Go & Zig
     go
     gopls
     gotools
