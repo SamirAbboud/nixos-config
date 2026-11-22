@@ -58,6 +58,7 @@
     # HTML, CSS, JSON Language Servers & Formatter
     vscode-langservers-extracted
     prettierd
+    js-beautify
 
     # JS/TS, Vue, Tailwind LSPs
     vtsls
@@ -67,6 +68,7 @@
     # Blade & Liquid Tooling
     blade-formatter
     shopify-cli
+    djlint
 
     # YAML & Markdown Language Servers
     yaml-language-server
